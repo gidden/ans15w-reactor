@@ -22,6 +22,8 @@ University of Wisconsin, Nuclear Engineering Dept., 1500 Engineering Dr., Madiso
 \newcommand{\vd}{\bm{\cdot}} % slightly bold vector dot
 \newcommand{\grad}{\vec{\nabla}} % gradient
 \newcommand{\ud}{\mathop{}\!\mathrm{d}} % upright derivative symbol
+\newcommand{\Fig}{Fig.~}
+\newcommand{\Figs}{Fig's~}
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,14 +52,14 @@ such complicated subject matter.
 The neutron-physics game is a time-step based Monte Carlo simulation
 \cite{lewis1984computational}. On each time step of the simulation, neutron
 positions are updated as a function of their velocities.  Then, if the neutron
-is inside any material, possible reactions (e.g. fission, scattering, etc.)
-occur according to probabilities defined by that material.  These
-probabilities are calculated as a function of distance each neutron traveled
-on the current time step.  Interaction probabilities and value sampling are
-not necessarily done using "correct" nuclear data or equations.  Rather,
-fundamental concepts are approximately modeled and specific values for
-reaction probabilities were adjusted to make playing simulation informative
-and fun.  Physics concepts modeled include:
+is inside any material, possible reactions (e.g., fission, scattering, etc.)
+occur according to probabilities defined by that material.  These probabilities
+are calculated as a function of distance each neutron traveled on the current
+time step.  Interaction probabilities and value sampling are not necessarily
+done using "correct" nuclear data or equations.  Rather, fundamental concepts
+are approximately modeled and specific values for reaction probabilities
+\textit{were adjusted to make playing simulation informative and fun}.  Physics
+concepts modeled include:
 
 \begin{itemize}
 
@@ -136,7 +138,7 @@ A classic initial problem in nuclear physics involves the attenuation of
 particles through materials. This simple concept becomes more complicated when
 considering changes in absorber atom density as neutrons are captured. These
 concepts can be easily demonstrated using the neutron physics game.  An
-attenuation experiment setup is shown in Figure \ref{fig:atten-setup}. It is
+attenuation experiment setup is shown in \Fig \ref{fig:atten-setup}. It is
 comprised of a unidirectional-beam neutron source, detector, absorbing
 material, and an additional detector. The initial detector provides an
 unattenuated neutron count/density. The neutrons then interact with the
@@ -144,12 +146,12 @@ absorbing material over the width of the block. The final detector provides an
 attenuated neutron count/density.
 
 After the beam is turned on, active attenuation of the neutron beam can be
-observed as shown in Figure \ref{fig:atten-on}. In time, however, the absorber
+observed as shown in \Fig \ref{fig:atten-on}. In time, however, the absorber
 atoms gradually become transmuted and cannot capture additional neutrons.
 Eventually, the material becomes effectively transparent to neutrons, as shown
-in Figure \ref{fig:atten-done}. Upon completion of this particular experiment,
+in \Fig \ref{fig:atten-done}. Upon completion of this particular experiment,
 the entirety of the absorber material in the beam's pathway has been burned.
-This phenomenon is shown clearly in Figure \ref{fig:atten-off} with the burned
+This phenomenon is shown clearly in \Fig \ref{fig:atten-off} with the burned
 portion in grey and the unburned portion in blue.
 
 \begin{figure}[hb]
@@ -176,20 +178,20 @@ portion in grey and the unburned portion in blue.
 
 \subsection{Super-criticality and Burnup}
 
-The configuration shown in Figure \ref{fig:thermal-setup} contains a fuel
+The configuration shown in \Fig \ref{fig:thermal-setup} contains a fuel
 block surrounded by a region of moderator all enclosed by a scattering block
 that acts as a reflector.  After a single burst of 1,000 neutrons is released
 into the center of the fuel, the neutron population quickly grows.  With a
 detector placed over the top of the super-critical system, the neutron
 population growth can be quantified. After just over 2 minutes, the population
-passes 15,000 neutrons as can be seen in Figure \ref{fig:thermal-on}.  This
+passes 15,000 neutrons as can be seen in \Fig \ref{fig:thermal-on}.  This
 growth would continue indefinitely if it weren't for the depletion of the
 fuel.
 
 After a few minutes of operation in the super-critical state, the reactor was
 shut down by removing the fuel from the system until the neutrons died away.
 This reactor configuration results in non-uniform burnup of the fuel. This is
-apparent in the post-shutdown state shown in Figure \ref{fig:thermal-after};
+apparent in the post-shutdown state shown in \Fig \ref{fig:thermal-after};
 the fuel's purple color transitions to grey as fissile atoms are burned up.
 The fuel nearer to the moderator has higher burnup due to the short mean free
 path of thermalized neutrons coming from the moderator.  Also notable is that
@@ -220,11 +222,11 @@ configuration.
 Sub-critical multiplication is an interesting phenomenon that can be
 illustrated well in the game.  To show this, we break the experiment into two
 setups: a neutron source streaming into a non-fuel environment, and a neutron
-source streaming into an environment with fuel.  Figure
+source streaming into an environment with fuel.  \Fig
 \ref{fig:scatter-setup} shows the unfueled environment with the neutron
 streaming source on the right and a large scattering block on the left.  A
 detector is placed over the scattering medium and the streaming source is
-turned on. Figure \ref{fig:scatter-equil} shows this setup after the detector
+turned on. \Fig \ref{fig:scatter-equil} shows this setup after the detector
 has reached an approximate equilibrium state with about 2,500 neutrons.
 
 \begin{figure}
@@ -241,9 +243,9 @@ has reached an approximate equilibrium state with about 2,500 neutrons.
     \label{fig:scatter-equil}
 \end{figure}
 
-The setup and procedure show by Figures \ref{fig:scatter-setup} and
+The setup and procedure show by \Figs \ref{fig:scatter-setup} and
 \ref{fig:scatter-equil} is repeated with a fuel block placed in the center of
-the scattering medium - shown in Figure \ref{fig:subcrit-setup}.  After
+the scattering medium - shown in \Fig \ref{fig:subcrit-setup}.  After
 turning on the neutron source, this setup reaches an approximate equilibrium
 state with about 10,000 neutrons - nearly four times more than the same setup
 without the fuel material block.
@@ -284,9 +286,12 @@ interactions can be visualized and intuition can be built. As noted by Felder
 \cite{felder2000learning}, such tools can fill a niche not normally provided to
 engineering students. Used in conjunction with traditional teaching methods, a
 tool such as this may prove to be quite useful in real-life educational
-settings. The authors welcome critiques, comments, feedback, and requests
-through either personal communication or through interaction with the Github
-repository.
+settings. For example, a computer-game-based teaching approach has been taken by
+Coller and Scott \cite{Coller2009900}in the realm of mechanical engineering: a
+numerical methods course was completely (and successfully) redesigned around
+the use of an instructional computer game. The authors welcome critiques,
+comments, feedback, and requests through either personal communication or
+through interaction with the Github repository.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{ans}
